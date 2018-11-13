@@ -8,13 +8,17 @@
 <title>主页面</title>
 </head>
 <body>
+<img src="../images/top.jpg" width="100%"></img>
+<!-- <div id="container">  </div>	-->
 
-	<img src="../images/top.jpg" align="left" width="100%"></img>
-	<div class="left">
-		<iframe  height=425px src="left.jsp"></iframe>
-	</div>
-	<div class="right">
-		<iframe  height=425px src="right.jsp"></iframe>
-	</div>
+  <!-- <div id="header">  </div> -->
+<!--   <div class="nav">.</div> -->
+  <div class="left_main">
+    <iframe width=100% frameborder="no" height=425px src=left.jsp></iframe>
+  </div>
+  <div class="right_main">
+    <iframe frameborder="no" width=100%  height=425px src=right.jsp></iframe>
+   </div>
+
 </body>
 </html>

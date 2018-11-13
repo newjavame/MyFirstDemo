@@ -18,12 +18,13 @@
 	<font color="red" size="4" style="font-family: simhei">前台系统</font>
 	<hr>
 	<a href=viewBook.jsp target="_blank">浏览图书</a>
-	<br>
+	<hr>
 	<br>
 	<font color="red" size="4" style="font-family: simhei">后台系统</font>
 	<hr>
 	<a href=listBook.jsp target="_blank">书架维护</a>
 	<hr>
 	<a href=listTitles.jsp target="_blank">查看图书信息</a>
+	<hr>
 </body>
 </html>

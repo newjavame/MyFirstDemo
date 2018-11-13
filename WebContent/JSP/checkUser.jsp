@@ -26,7 +26,8 @@
 			}			
 		}
 		out.println("无此用户或密码错误，登录失败！<br><br>");
-		out.println("<a href='../HTML/index.html'>重新登录</a>或<a href='../JSP/Reg.jsp'>注册</a>");
+		out.println("<a href='../HTML/index.html'>重新登录");
+		//</a>或<a href='../JSP/Reg.jsp'>注册</a>
 	%>
 </body>
 </html>
