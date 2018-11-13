@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Insert title here</title>
+<title>注册账号</title>
 </head>
 <body>
 	<script language="javascript">
