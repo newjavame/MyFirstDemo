@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8" import="java.sql.*"%>
-<jsp:useBean id="db" class="bean.DBcon" scope="session"/>
+<jsp:useBean id="db" class="bean.DBcon" scope="request"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +13,7 @@
 	String username=request.getParameter("user");
 	String password=request.getParameter("password");
 	String checkcode=request.getParameter("checkcode");
-	String piccode=request.getSession().getAttribute("checkcode").toString();
+	String piccode=request.getSession().getAttribute("piccode").toString();
 	
 %>
 	你输入的验证码是：<%=checkcode %><br>
