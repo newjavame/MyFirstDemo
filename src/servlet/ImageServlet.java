@@ -1,20 +1,19 @@
-package bean;
+package servlet;
 
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Random;
-
 import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
-
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
+import javax.websocket.Session;
 
 public class ImageServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -35,8 +34,7 @@ public class ImageServlet extends HttpServlet {
 		Graphics g = bim.getGraphics();
 		Random rm = new Random();
 		g.setColor(new Color(rm.nextInt(100), 205, rm.nextInt(100)));
-		g.fillRect(0, 0, width, heiht);
-		//StringBuffer sbf = new StringBuffer();
+		g.fillRect(0, 0, width, heiht);	
 		 String sRand="";
 		// 输出数字
 		for (int i = 0; i < 4; i++) {
@@ -49,18 +47,19 @@ public class ImageServlet extends HttpServlet {
 		}       
 		  
 		// 生成的验证码保存到session中
-		HttpSession session = request.getSession(true);
-		session.setAttribute("piccode", sRand);
-
+		HttpSession session = request.getSession(true);		
+		session.setAttribute("piccode", sRand);	
+		
+		/*request.getSession().setAttribute("piccode", sRand);*/
 		// 禁止缓存
 		response.setHeader("Prama", "no-cache");
 		response.setHeader("Coche-Control", "no-cache");
 		response.setDateHeader("Expires", 0);
 		response.setContentType("image/jpeg");
-		// 将bim图片以jpg格式返回给浏览器
-		ImageIO.write(bim, "JPG", response.getOutputStream());
+		// 将bim图片以jpg格式返回给浏览器		
+		ImageIO.write(bim, "JPG", response.getOutputStream());		
 		response.getOutputStream().close();
-
+		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
