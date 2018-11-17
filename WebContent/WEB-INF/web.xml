@@ -16,7 +16,6 @@
     <servlet-name>ImageServlet</servlet-name>
     <url-pattern>/servlet/ImageServlet</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>CheckServer</servlet-name>
     <servlet-class>servlet.CheckServer</servlet-class>
@@ -24,8 +23,8 @@
   <servlet-mapping>
     <servlet-name>CheckServer</servlet-name>
     <url-pattern>/servlet/CheckServer</url-pattern>
-  </servlet-mapping>
-    
+  </servlet-mapping> 
+ 
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>

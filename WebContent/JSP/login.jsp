@@ -1,14 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-	import="java.util.*" pageEncoding="utf-8" %>
+	import="java.util.*" pageEncoding="utf-8"%>
 <%-- <%
-/* 网站域名或ip后面的部分,即项目上下文路径 */
-      String path=request.getContextPath();
-/* //访问基准路径,该页面上的相对路径需要扣上的前缀 */
+		//网站域名或ip后面的部分,即项目上下文路径 
+     	 String path=request.getContextPath();
+		//访问基准路径,该页面上的相对路径需要扣上的前缀 
         String basePath = request.getScheme()+"://"+request.getServerName()+":"
             +request.getServerPort()+path+"/";
 
    %> --%>
-   
 <html>
 <head>
 <meta charset="utf-8">
@@ -17,11 +16,11 @@
 </head>
 <script type="text/javascript">
 	function reloadImage(t) {
-		t.src = "../servlet/ImageServlet?flag=" + Math.random();
+		t.src = "checkUser1.jsp?flag=" + Math.random();
 	}
 </script>
 <body>
-	<form action="./checkUser1.jsp" method="post"> 
+	<form action="../servlet/ImageServlet" method="post">
 		<table>
 			<tr>
 				<td colspan="2" align="center">用户登录</td>
@@ -37,7 +36,7 @@
 			<tr>
 				<td>验证码：</td>
 				<td><input type="text" name="inputcheckcode"> <img
-					src="../servlet/ImageServlet" align="middle" alt="看不清，点击这里"
+					src="checkUser1.jsp" align="middle" alt="看不清，点击这里"
 					onclick="reloadImage(this)"></td>
 			</tr>
 			<tr>
@@ -45,6 +44,6 @@
 				</td>
 			</tr>
 		</table>
-	</form> 
+	</form>
 </body>
 </html>
