@@ -20,7 +20,7 @@ public class ImageServlet extends HttpServlet {
 	public ImageServlet() {
 		super();
 	}
-
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// 解决中文乱码问题
@@ -32,15 +32,21 @@ public class ImageServlet extends HttpServlet {
 		String checkcode = request.getParameter("inputcheckcode");
 		// 生成一个session对象，从jsp中的session中取值
 		HttpSession session = request.getSession();
-		String piccode = (String) session.getAttribute("piccode");
+		String piccode ;//= (String) session.getAttribute("piccode");
 		PrintWriter out = response.getWriter();
-
-		if (checkcode.equals(piccode)) {
-			out.println("验证正确！");
-		} else {
-			out.println("验证错误！");
+		Object obj=session.getAttribute("piccode");
+		
+		if(obj==null) {
+			session.setAttribute("piccode","123");
+			piccode=(String) session.getAttribute("piccode");
+			if (checkcode.equals(piccode)) {
+				out.println("验证正确！");
+			} else {
+				out.println("验证错误！");
+			}
+		}else {
+			out.print("not null");
 		}
-
 		/*
 		 * Connection conn = DBcon.getConnection(); Statement stmt; try { stmt =
 		 * conn.createStatement(); String sql = "select * from userinfo"; ResultSet rs =

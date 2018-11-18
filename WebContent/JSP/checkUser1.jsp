@@ -27,19 +27,22 @@ java.util.Random,java.awt.Color,java.awt.Font"%>
 			g.setColor(Color.black);
 			g.setFont(new Font("华文隶书", Font.BOLD | Font.ITALIC, 22));
 			int n = rm.nextInt(10);
-			char ctmp = (char) n;
-			sRand += String.valueOf(ctmp);
+			//char ctmp = (char) n;
+			sRand += String.valueOf(n);
 			g.drawString("" + n, i * 15 + 5, 18);
 		}
 		//将验证码保存到session中
 		session.setAttribute("piccode", sRand);
-		// 禁止缓存
+		/* // 禁止缓存
 		response.setHeader("Prama", "no-cache");
 		response.setHeader("Coche-Control", "no-cache");
 		response.setDateHeader("Expires", 0);
-		response.setContentType("image/jpeg");
+		response.setContentType("image/jpeg"); */
 		// 将bim图片以jpg格式返回给浏览器
 		ImageIO.write(bim, "JPG", response.getOutputStream());
+		//解决项目访问时getOutStream()hasrecalled的异常
+		out.clear();
+		out=pageContext.pushBody();
 		response.getOutputStream().close();
 	%>
 </body>
