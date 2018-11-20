@@ -6,7 +6,6 @@
 		//访问基准路径,该页面上的相对路径需要扣上的前缀 
         String basePath = request.getScheme()+"://"+request.getServerName()+":"
             +request.getServerPort()+path+"/";
-
    %> --%>
 <html>
 <head>
@@ -38,6 +37,7 @@
 				<td><input type="text" name="inputcheckcode"> <img
 					src="checkUser1.jsp" align="middle" alt="看不清，点击这里"
 					onclick="reloadImage(this)"></td>
+					<input type="text" name="inputpiccode" >
 			</tr>
 			<tr>
 				<td colspan="2" align="center"><input type="submit" value="登录">

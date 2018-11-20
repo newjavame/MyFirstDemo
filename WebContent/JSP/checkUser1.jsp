@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"%>
+	pageEncoding="utf-8" %>
 <%@ page
 	import="java.awt.image.BufferedImage,javax.imageio.ImageIO,java.awt.Graphics,
 java.util.Random,java.awt.Color,java.awt.Font"%>
@@ -32,18 +32,22 @@ java.util.Random,java.awt.Color,java.awt.Font"%>
 			g.drawString("" + n, i * 15 + 5, 18);
 		}
 		//将验证码保存到session中
-		session.setAttribute("piccode", sRand);
+		session.setAttribute("piccode", sRand);			
+		//out.print(session.getAttribute("piccode"));
 		/* // 禁止缓存
 		response.setHeader("Prama", "no-cache");
 		response.setHeader("Coche-Control", "no-cache");
 		response.setDateHeader("Expires", 0);
 		response.setContentType("image/jpeg"); */
-		// 将bim图片以jpg格式返回给浏览器
-		ImageIO.write(bim, "JPG", response.getOutputStream());
+		// 将bim图片以jpg格式返回给浏览器		
+		ImageIO.write(bim, "JPG", response.getOutputStream());	
+		/* session.setAttribute("hello", "world!");
+		out.print(session.getAttribute("hello")); */
+		
 		//解决项目访问时getOutStream()hasrecalled的异常
-		out.clear();
-		out=pageContext.pushBody();
-		response.getOutputStream().close();
+	/* 	out.clear();
+		out = pageContext.pushBody();
+		response.getOutputStream().close(); */
 	%>
 </body>
 </html>

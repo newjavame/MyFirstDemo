@@ -20,7 +20,7 @@ public class ImageServlet extends HttpServlet {
 	public ImageServlet() {
 		super();
 	}
-	
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// 解决中文乱码问题
@@ -32,36 +32,29 @@ public class ImageServlet extends HttpServlet {
 		String checkcode = request.getParameter("inputcheckcode");
 		// 生成一个session对象，从jsp中的session中取值
 		HttpSession session = request.getSession();
-		String piccode ;//= (String) session.getAttribute("piccode");
+		String piccode = (String) session.getAttribute("piccode");
 		PrintWriter out = response.getWriter();
-		Object obj=session.getAttribute("piccode");
-		
-		if(obj==null) {
-			session.setAttribute("piccode","123");
-			piccode=(String) session.getAttribute("piccode");
-			if (checkcode.equals(piccode)) {
-				out.println("验证正确！");
-			} else {
-				out.println("验证错误！");
-			}
-		}else {
-			out.print("not null");
+		if (checkcode.equals(piccode)) {
+			out.println("验证正确！");
+		} else {
+			out.println("验证错误！" + piccode);
 		}
-		/*
-		 * Connection conn = DBcon.getConnection(); Statement stmt; try { stmt =
-		 * conn.createStatement(); String sql = "select * from userinfo"; ResultSet rs =
-		 * stmt.executeQuery(sql);
-		 * 
-		 * while (checkcode.equals(piccode) && rs.next()) {
-		 * request.getSession().setAttribute("username", username);// 将用户名保存到session中
-		 * out.println("恭喜你验证通过!"); // out.println("<a href='main.jsp'>转向主页</a>");
-		 * request.getRequestDispatcher("main.jsp").forward(request, response); }
-		 * out.println("验证错误！"); // out.println("<a href='login.jsp'>重新登录</a>");
-		 * request.getRequestDispatcher("login.jsp").forward(request, response); } catch
-		 * (Exception e) { // TODO Auto-generated catch block e.printStackTrace(); }
-		 */
 	}
-	
+
+	/*
+	 * Connection conn = DBcon.getConnection(); Statement stmt; try { stmt =
+	 * conn.createStatement(); String sql = "select * from userinfo"; ResultSet rs =
+	 * stmt.executeQuery(sql);
+	 * 
+	 * while (checkcode.equals(piccode) && rs.next()) {
+	 * request.getSession().setAttribute("username", username);// 将用户名保存到session中
+	 * out.println("恭喜你验证通过!"); // out.println("<a href='main.jsp'>转向主页</a>");
+	 * request.getRequestDispatcher("main.jsp").forward(request, response); }
+	 * out.println("验证错误！"); // out.println("<a href='login.jsp'>重新登录</a>");
+	 * request.getRequestDispatcher("login.jsp").forward(request, response); } catch
+	 * (Exception e) { // TODO Auto-generated catch block e.printStackTrace(); }
+	 */
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		doGet(request, response);
