@@ -34,15 +34,17 @@ public class TitleDaoImpl implements TitleDao {
 				book.setPrice(results.getFloat("price"));
 				titlesList.add(book);
 			}
+			
 		} catch (SQLException e) {
 			// TODO 自动生成的 catch 块
 			e.printStackTrace();
 		} finally {
 			DBcon.closeResultSet(results);
 			DBcon.closeStatement(titleQuery);
-			DBcon.closeConnection(connection);
+			DBcon.closeConnection(connection);			
 		}
 		return titlesList;
+		
 
 	}
 
