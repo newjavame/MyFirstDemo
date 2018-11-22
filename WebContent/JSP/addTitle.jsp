@@ -7,12 +7,8 @@
 <title>添加图书</title>
 </head>
 <body>
-<form action=".//servlet/DoAddTitle">
-	<table>
-		<tr>
-			<td>ISBN</td>
-			<td><input type="text" name="isbn" /></td>
-		</tr>
+<form action="../servlet/DoAddTitle">
+	<table>	
 		<tr>
 			<td>ISBN</td>
 			<td><input type="text" name="isbn" /></td>
@@ -46,6 +42,5 @@
 		</tr>		
 	</table>
 </form>
-
 </body>
 </html>

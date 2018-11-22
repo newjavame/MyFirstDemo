@@ -32,7 +32,6 @@
     <servlet-name>ToEditTitle</servlet-name>
     <url-pattern>/servlet/ToEditTitle</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>test</servlet-name>
     <servlet-class>servlet.test</servlet-class>
@@ -41,7 +40,6 @@
     <servlet-name>test</servlet-name>
     <url-pattern>/servlet/test</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>DoDeleteTitle</servlet-name>
     <servlet-class>servlet.DoDeleteTitle</servlet-class>
@@ -51,6 +49,33 @@
     <url-pattern>/servlet/DoDeleteTitle</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <servlet-name>DoAddTitle</servlet-name>
+    <servlet-class>servlet.DoAddTitle</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DoAddTitle</servlet-name>
+    <url-pattern>/servlet/DoAddTitle</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>ToViewTitle</servlet-name>
+    <servlet-class>servlet.ToViewTitle</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ToViewTitle</servlet-name>
+    <url-pattern>/servlet/ToViewTitle</url-pattern>
+  </servlet-mapping>
+ 
+    <servlet>
+    <servlet-name>DoSaveEditTitle</servlet-name>
+    <servlet-class>servlet.DoSaveEditTitle</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DoSaveEditTitle</servlet-name>
+    <url-pattern>/servlet/DoSaveEditTitle</url-pattern>
+  </servlet-mapping>
+   
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>

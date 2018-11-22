@@ -19,7 +19,7 @@ public class ToEditTitle extends HttpServlet {
 	public ToEditTitle() {
 		super();
 	}
-
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		doPost(request, response);
@@ -28,13 +28,13 @@ public class ToEditTitle extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf-8");
-	/*	String isbn = request.getParameter("isbn");
-		PrintWriter out=response.getWriter();
-		out.println(isbn);
+		String isbn = request.getParameter("isbn");
+	/*	PrintWriter out=response.getWriter();
+		out.println(isbn);*/
 		TitleDao titleDao = new TitleDaoImpl();
 		Title title = titleDao.findByIsbn(isbn);
 		// 将图书信息保存到request对象中，转发到编辑页面
-		request.setAttribute("title", title);*/
+		request.setAttribute("title", title);
 		request.getRequestDispatcher("/JSP/editTitle.jsp").forward(request, response);
 	
 	}

@@ -66,4 +66,12 @@ public class Title {
 		this.price = price;
 	}
 
+	@Override
+	public String toString() {
+		return "Title [isbn=" + isbn + ", title=" + title + ", copyright=" + copyright + ", imageFile=" + imageFile
+				+ ", editonNumber=" + editonNumber + ", publisherId=" + publisherId + ", price=" + price + "]";
+	}
+	
+	
+
 }
