@@ -32,13 +32,10 @@ public class DoDeleteTitle extends HttpServlet {
 		TitleDao titleDao=new TitleDaoImpl();
 		int n=titleDao.delete(isbn);
 		if(n>0)
-		  response.sendRedirect("listBook.jsp");
+		  response.sendRedirect("../JSP/listBook.jsp");
 		else
-		   response.sendRedirect("error.jsp");
-		  
-		/*PrintWriter out = response.getWriter();
-		out.println(isbn);*/
-	
+		   response.sendRedirect("../JSP/error.jsp");	  
+		
 	}
 
 }
