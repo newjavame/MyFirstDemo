@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>提交图书订单</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function RegisterSubmit() {
+			with (document.order) {
+				var user = username.value;
+				var cart = creditcard.value;
+				if (user == null || user == "") {
+					alert("请填写用户名！");
+				} else if ((cart == null || cart == "")) {
+					alert("请填写信用卡号码！");
+				} else {
+					document.order.submit();
+				}
+			}
+		}
+	</script>
+	<form action="../servlet/DoOrder" method="post" name="order">
+		<table style="TEXT-ALIGN: center" cellSpacing=1 cellPadding=1
+			width=260 border=1>
+			<tr>
+				<td colspan="2"><font size=4>订单处理请输入以下信息:</font></td>
+			</tr>
+			<tr>
+				<td colspan="2">&nbsp;</td>
+			</tr>
+			<tr>
+				<td>用户名:</td>
+				<td><div align="left">
+						<input type="text" name="username" size="25" />
+					</div></td>
+			</tr>
+			<tr>
+				<td colspan="2">&nbsp;</td>
+			</tr>
+			<tr>
+				<td>邮编:</td>
+				<td><div align="left">
+						<input type="text" name="zipcode" size="25" />
+					</div></td>
+			</tr>
+			<tr>
+				<td colspan="2">&nbsp;</td>
+			</tr>
+			<tr>
+				<td>电话:</td>
+				<td><div align="left">
+						<input type="text" name="phone" size="25" />
+					</div></td>
+			</tr>
+			<tr>
+				<td colspan="2">&nbsp;</td>
+			</tr>
+			<tr>
+				<td>信用卡:</td>
+				<td><div align="left">
+						<input type="text" name="creditcard" size="25" />
+					</div></td>
+			</tr>
+			<tr>
+				<td colspan="2">&nbsp;</td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="提交" name="B1"
+					onclick="RegisterSubmit()"></td>
+				<td><input type="reset" value="重置" name="B2"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
