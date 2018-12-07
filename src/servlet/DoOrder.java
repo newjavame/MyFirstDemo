@@ -31,7 +31,7 @@ public class DoOrder extends HttpServlet {
 		session.setAttribute("order",bookorderbean);//将订单信息放入session中供bye页面调用
 		OrderOperation op=new OrderOperation();
 		op.saveOrder(bookorderbean);//将订单保存到数据库
-		request.getRequestDispatcher("bye.jsp").forward(request, response);
+		request.getRequestDispatcher("/JSP/bye.jsp").forward(request, response);
 		
 	}
 

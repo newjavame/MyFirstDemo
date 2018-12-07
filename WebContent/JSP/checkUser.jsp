@@ -19,6 +19,7 @@
 		Statement st = conn.createStatement();
 		String sql = "select * from userinfo";
 		ResultSet rs = st.executeQuery(sql);
+		//检查用户名和密码合法化
 		while (rs.next()) {
 			if (name.equals(rs.getString("loginname")) && password.equals(rs.getString("password"))) {
 				application.setAttribute("name", name);

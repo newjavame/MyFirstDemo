@@ -16,41 +16,39 @@
 				submit();
 		}
 	}
-/* 	function RegUser() {
-		window.location.href = '../JSP/Reg.jsp';
-	} */
 </script>
+<link rel="stylesheet" type="text/css" href="../css/logreg.css" />
 </head>
-<body>
-	<table>
-		<tr>
-			<td><img src="../images/top.jpg"></img></td>
-		</tr>
-		<tr>
-			<td align="center">
-				<p>
-					<font color="red" size=5 style="font-family: simhei">请登录:</font>
-				<p>
-				<form method="post" name="Register" action="../JSP/checkUser.jsp"
-					target="_self">
-			
-						用户名：&nbsp;<input type="text" name="loginName" size="20"><br><br>
-					
-						  密码：&nbsp;<input type="password" name="password" size="20"><br><br>
-					
-						验证码：&nbsp;<input type="text" name="checkCode" size="20"><br><br>
-			
-						<input type="button" value="提交" name="B1"
-							onclick="RegisterSubmit()">
-							 &nbsp;&nbsp;&nbsp;&nbsp;<input type="reset"
-							value="重置" name="B2"><br> 
-					<p>
-							<a href="../JSP/Reg.jsp">还没有账号？去注册吧</a>							
-						<!-- <input type="reset"
-							value="注册" name="B2" onclick=RegUser()> -->
-				</form>
-			</td>
-		</tr>
-	</table>
+<body class="body1">
+	<form method="post" name="Register" action="../JSP/checkUser.jsp"
+		target="_self">
+		<table align="center" valign="center">
+			<tr>
+				<td colspan="2" align="center"><font size=5
+					style="font-family: simhei">Sign In:</font></td>
+			</tr>
+			<tr>
+				<td>USERNAME：</td>
+				<td><input type="text" name="loginName" size="20" class="text1"></td>
+			</tr>
+			<tr>
+				<td>PASSWORD：</td>
+				<td><input type="password" name="password" size="20"
+					class="text1"></td>
+			</tr>
+			<tr>
+				<td>CHECKCODE：</td>
+				<td><input type="text" name="checkCode" size="20" class="text1"></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="sign in" name="B1"
+					onclick="RegisterSubmit()" class="button1"></td>
+				<td><input type="reset" value="fresh" name="B2" class="button1" ></td>
+			</tr>
+			<tr>
+				<td colspan="2"><a href="../JSP/Reg.jsp">Don't hava an account? Sign Up</a></td>
+			</tr>
+		</table>
+	</form>
 </body>
 </html>

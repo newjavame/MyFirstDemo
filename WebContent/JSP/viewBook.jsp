@@ -21,7 +21,7 @@
 			<td>版权</td>
 		</tr>
 		<%
-			List list = dao.getTitles();//得到图书列表
+			List<Title> list = dao.getTitles();//得到图书列表
 			Title titles = null;
 			for (int i = 0; i < list.size(); i++) {
 				titles = (Title) list.get(i);

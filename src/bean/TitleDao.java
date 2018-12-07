@@ -8,8 +8,6 @@ public interface TitleDao {
 	public int add(Title titlebean);//添加图书
 	public int delete(String isbn);//删除图书
 	public int update(Title titlebean);//更新修改图书
-	public Title findByIsbn(String isbn);//查询图书
-	
-	
+	public Title findByIsbn(String isbn);//查询图书	
 
 }

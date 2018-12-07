@@ -7,7 +7,7 @@
 <title>查看图书信息</title>
 </head>
 <body>
-	<table bgcolor="lightgrey">
+	<table bgcolor="lightgrey" align="center" valign="center" >
 		<tr>
 			<td>ISBN</td>
 			<td>书名</td>
@@ -23,10 +23,10 @@
 			while (rs.next()) {
 		%>
 		<tr bgcolor="cyan">
-			<td><%=rs.getString(1)%></td>
-			<td><%=rs.getString(2)%></td>
+			<td><%=rs.getString("isbn")%></td>
+			<td><%=rs.getString("title")%></td>
 			<td><%=rs.getInt("editionNumber")%></td>
-			<td><%=rs.getInt(4)%></td>
+			<td><%=rs.getString("copyright")%></td>
 			<td><%=rs.getDouble("price")%></td>
 		</tr>
 		<%
@@ -37,5 +37,6 @@
 		%>
 
 	</table>
+
 </body>
 </html>

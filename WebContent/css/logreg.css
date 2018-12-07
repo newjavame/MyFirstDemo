@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.body1 {
+	background-image: url(../images/bglog.jpg);
+	background-size: 100%;
+	height: auto;
+}
+
+.body2 {
+	background-image: url(../images/reglog.png);
+	background-size: 100%;
+	height: auto;
+}
+
+.text1 {
+	width: 130px;
+	border-radius: 15px;
+}
+
+.button1 {
+	border-radius: 6px;
+}
+
+table {
+	margin-top: 60px;
+
+}

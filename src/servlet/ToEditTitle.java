@@ -28,9 +28,7 @@ public class ToEditTitle extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf-8");
-		String isbn = request.getParameter("isbn");
-	/*	PrintWriter out=response.getWriter();
-		out.println(isbn);*/
+		String isbn = request.getParameter("isbn");	
 		TitleDao titleDao = new TitleDaoImpl();
 		Title title = titleDao.findByIsbn(isbn);
 		// 将图书信息保存到request对象中，转发到编辑页面

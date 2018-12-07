@@ -37,10 +37,10 @@
 			<td align="left"><%=titles.getCopyright()%></td>
 		</tr> 
 		<tr align="left">
-			<td><form method="post" action="../servlet/AddTitleToCart">
+			<td><form method="post" action="../servlet/AddTitlesToCart">
 					<input type="submit" value="放入购物车" />
 				</form></td>
-			<td><form method="post" action="viewCart.jsp">
+			<td><form method="post" action="../JSP/viewCart.jsp">
 					<input type="submit" value="查看购物车" />
 				</form></td>
 		</tr>

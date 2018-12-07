@@ -8,7 +8,7 @@
 </head>
 <body>
 <form action="../servlet/DoAddTitle">
-	<table>	
+	<table align="center" valign="center">	
 		<tr>
 			<td>ISBN</td>
 			<td><input type="text" name="isbn" /></td>
@@ -38,6 +38,7 @@
 			<td><input type="text" name="copyright" /></td>
 		</tr>
 		<tr>
+		
 			<td colspan="2" align="center"><input type="submit" value="添加"></td>
 		</tr>		
 	</table>

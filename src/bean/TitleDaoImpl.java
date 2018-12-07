@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 //图书接口的实现类
 public class TitleDaoImpl implements TitleDao {
@@ -17,16 +18,13 @@ public class TitleDaoImpl implements TitleDao {
 	public List<Title> getTitles() {
 		List<Title> titlesList = new ArrayList<Title>();
 		connection = DBcon.getConnection();
-		Title book = new Title();
+		Title book = null;
 		try {
-			String sql = "select * from titles";
-			/*
-			 * "Select isbn,title,editionNumber,copyright," + "publisherID,imageFile,price"
-			 * + "From titles order by title";
-			 */
+			String sql = "select * from titles";			
 			titleQuery = connection.prepareStatement(sql);
 			results = titleQuery.executeQuery();
-			while (results.next()) {				
+			while (results.next()) {	
+				book = new Title();
 				book.setIsbn(results.getString("isbn"));
 				book.setTitle(results.getString("title"));
 				book.setEditonNumber(results.getInt("editionNumber"));
@@ -54,7 +52,7 @@ public class TitleDaoImpl implements TitleDao {
 		int result = 0;
 		connection = DBcon.getConnection();
 		String sql = "insert into titles(isbn,title,editionNumber,";
-		sql += "copyright,publisherID,imageFile,price) values(?,?,?,?,?,?,?)";
+		sql += "copyright,pulisherID,imageFile,price) values(?,?,?,?,?,?,?)";
 		try {
 			titleQuery = connection.prepareStatement(sql);
 			titleQuery.setString(1, titlebean.getIsbn());
@@ -161,8 +159,8 @@ public class TitleDaoImpl implements TitleDao {
 
 	}
 
-	//public static void main(String[] args) {
-		/*Title book = new Title();
+	/*public static void main(String[] args) {
+		Title book = new Title();
 		TitleDao titleDao = new TitleDaoImpl();
 		book = titleDao.findByIsbn("789");
 		//book.setCopyright("123");
@@ -175,16 +173,37 @@ public class TitleDaoImpl implements TitleDao {
 			titles = (Title) list.get(i);
 			
 			}
-		System.out.println(titles.getCopyright());*/
+		System.out.println(titles.getCopyright());
 		//测试更新数据库
-		/*Title book = new Title();
+		Title book = new Title();
 		TitleDao titleDao = new TitleDaoImpl();
 		book.setIsbn("123");
 		book.setPrice(123);
 		titleDao.update(book);
 		更新功能正常
-		*/
+	String sql = "insert into titles(isbn,title,editionNumber,";
+		sql += "copyright,publisherID,imageFile,price) values(?,?,?,?,?,?,?)";
 		
-	//}
-
+		Title book = new Title();
+		TitleDao titleDao = new TitleDaoImpl();
+		book.setIsbn("12");
+		book.setTitle("232");
+		book.setEditonNumber(323);
+		book.setCopyright("dfas");
+		book.setPublisherId(123);
+		book.setImageFile("232");
+		book.setPrice(232);
+		titleDao.add(book);
+		
+		TitleDao titleDao = new TitleDaoImpl();
+		List<Title> list = titleDao.getTitles();//得到图书列表
+		Title titles = null;
+		for (int i = 0; i < list.size(); i++) {
+			titles = (Title) list.get(i);
+			System.out.println(titles);
+		
+	}
+		
+	}
+*/
 }

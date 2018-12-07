@@ -24,9 +24,7 @@ public class ToViewTitle extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf-8");
-		String isbn=request.getParameter("isbn");
-		/*PrintWriter out = response.getWriter();
-		out.println(isbn);*/
+		String isbn=request.getParameter("isbn");		
 		TitleDao titleDao=new TitleDaoImpl();
 		Title titles=titleDao.findByIsbn(isbn);
 		HttpSession session=request.getSession();

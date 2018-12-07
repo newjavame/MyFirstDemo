@@ -8,10 +8,10 @@ import java.sql.SQLException;
 
 //封装业务的javabean
 public class DBcon {
-	private static final String DRIVER_CLASS = "com.mysql.jdbc.Driver";
-	private static final String url = "jdbc:mysql://localhost:3306/books?useUnicode=true&characterEncoding=UTF-8";
-	private static final String user = "root";
-	private static final String psw = "mysql";
+	private static final String	DRIVER_CLASS	= "com.mysql.jdbc.Driver";
+	private static final String	url				= "jdbc:mysql://localhost:3306/books?useUnicode=true&characterEncoding=UTF-8";
+	private static final String	user			= "root";
+	private static final String	psw				= "mysql";
 
 	// 返回一个连接对象
 	public static Connection getConnection() {

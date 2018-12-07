@@ -24,7 +24,7 @@ public class AddTitlesToCart extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		HttpSession session = request.getSession(false);
+		HttpSession session = request.getSession(true);
 		//RequestDispatcher dispatcher;
 		// 如果session不存在就跳转到浏览图书页面;
 		if (session == null) {
