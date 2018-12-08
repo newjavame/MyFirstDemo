@@ -7,6 +7,7 @@
 <title>主页面</title>
 </head>
 <body>
-	<iframe width=100% frameborder="no" height=425px src=left.jsp></iframe>
+<iframe width=100% frameborder="no" height=425px src=left.jsp></iframe>
+
 </body>
 </html>

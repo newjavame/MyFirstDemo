@@ -24,13 +24,10 @@ public class AddTitlesToCart extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		HttpSession session = request.getSession(true);
-		//RequestDispatcher dispatcher;
+		HttpSession session = request.getSession();	
 		// 如果session不存在就跳转到浏览图书页面;
-		if (session == null) {
-			/*dispatcher = request.getRequestDispatcher("/JSP/viewBook.jsp");
-			dispatcher.forward(request, response);*/
-			request.getRequestDispatcher("/JSP/viewBook.jsp").forward(request, response);
+		if (session == null) {			
+			request.getRequestDispatcher("../JSP/viewBook.jsp").forward(request, response);
 		}
 		// 从session中提取出购物车（cart）和要添加的图书对象titles
 		Map cart = (Map) session.getAttribute("cart");

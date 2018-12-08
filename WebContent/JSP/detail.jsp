@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"%>
-<%@ page import="java.util.*,bean.*"%>
+	pageEncoding="utf-8" %>
+<%@ page import="java.util.*,bean.*" session="true" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +20,7 @@
 		<tr>
 			<td rowspan="5"><img style="border: thin solid black" width="80"
 				height="120" alt="<%=titles.getTitle()%>:<%=titles.getIsbn()%>.jpg"
-				src="images/<%=titles.getIsbn()/*titles.getImageFile()*/ %>.jpg"></td>
+				src="images/<%=titles.getIsbn()%>.jpg"></td>
 			<td class="bold" align="left">图书编号:</td>
 			<td align="left"><%=titles.getIsbn()%></td>
 		</tr>

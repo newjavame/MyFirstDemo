@@ -60,8 +60,8 @@
 		session.setAttribute("total", new Double(total));
 		}
 	%>
-	<a href="viewBook.jsp">继续购物</a>
-	<form action="order.html" method="get">
+	<a href="../JSP/viewBook.jsp">继续购物</a>
+	<form action="../HTML/order.html" method="get">
 		<input type="submit" value="结账">
 	</form>
 </body>

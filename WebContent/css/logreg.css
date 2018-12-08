@@ -12,6 +12,22 @@
 	height: auto;
 }
 
+.viewbookbgbody {
+	background-image: url(../images/viewbookbg.jpg);
+	background-size: 100%;
+	height: auto;
+}
+.listbookbody{
+	background-image: url(../images/viewbookbg.jpg);
+    background-size: 100%;
+    height: auto;
+}
+.listtitlesbody{
+    background-image: url(../images/listtitlesbg.jpg);
+    background-size: 100%;
+    height: auto;
+}
+
 .text1 {
 	width: 130px;
 	border-radius: 15px;
@@ -23,5 +39,4 @@
 
 table {
 	margin-top: 60px;
-
 }

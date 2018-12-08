@@ -6,8 +6,8 @@
 <meta charset="utf-8">
 <title>查看图书信息</title>
 </head>
-<body>
-	<table bgcolor="lightgrey" align="center" valign="center" >
+<body >
+	<table>
 		<tr>
 			<td>ISBN</td>
 			<td>书名</td>
@@ -22,7 +22,7 @@
 			ResultSet rs = st.executeQuery(sql);
 			while (rs.next()) {
 		%>
-		<tr bgcolor="cyan">
+		<tr >
 			<td><%=rs.getString("isbn")%></td>
 			<td><%=rs.getString("title")%></td>
 			<td><%=rs.getInt("editionNumber")%></td>

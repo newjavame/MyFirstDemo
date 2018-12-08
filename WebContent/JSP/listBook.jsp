@@ -8,10 +8,11 @@
 <head>
 <meta charset="utf-8">
 <title>书架维护</title>
+<link rel="stylesheet" type="text/css" href="../css/logreg.css" />
 </head>
-<body>
-	<center><h1 >书架维护</h1></center>
-	<table bgcolor="lightgrey" align="center" valign="center">
+<body class="listbookbody">
+<h1>书架维护</h1>
+	<table >
 		<tr>
 			<td>ISBN</td>
 			<td>书名</td>
@@ -26,18 +27,18 @@
 			ResultSet rs = st.executeQuery(sql);
 			while (rs.next()) {
 		%>
-		<tr bgcolor="cyan">
-			<td><a href="../servlet/ToEditTitle?isbn=<%=rs.getInt("isbn")%>"
+		<tr >
+			<td><a href="../servlet/ToEditTitle?isbn=<%=rs.getString("isbn")%>"
 				title="单击进行图书修改"><%=rs.getString(1)%></a></td>
 			<%
-				request.setAttribute("isbn", rs.getInt("isbn"));
+				request.setAttribute("isbn", rs.getString("isbn"));
 			%>
 			<td><%=rs.getString(2)%></td>
 			<td><%=rs.getInt("editionNumber")%></td>
 			 <td><%=rs.getString("copyright")%></td> 
 			<td><%=rs.getDouble("price")%></td>
 			<td><a
-				href="../servlet/DoDeleteTitle?isbn=<%=rs.getInt("isbn")%>">删除</a></td>
+				href="../servlet/DoDeleteTitle?isbn=<%=rs.getString("isbn")%>">删除</a></td>
 		</tr>
 		<%
 			}
@@ -47,6 +48,6 @@
 		%>
 	</table>
 	<br>
-	<center><a href="addTitle.jsp">添加图书</a></center>
+	<a href="addTitle.jsp">添加图书</a>
 </body>
 </html>
