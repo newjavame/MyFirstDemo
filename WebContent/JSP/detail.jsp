@@ -6,11 +6,19 @@
 <head>
 <meta charset="utf-8">
 <title>图书信息</title>
+  <style type="text/css">
+body {
+    background-image: url(../images/detail.jpg);
+    background-size: 100%;
+    height: auto;
+}
+</style>
 </head>
 <body>
+
 	<%
 		//从session中获取titles值，
-		Title titles = (Title) session.getAttribute("titles"); 
+		Title titles = (Title) session.getAttribute("titles");
 	%>
 	<table style="TEXT-ALIGN: center" cellSpacing="0" cellPadding="0"
 		width="590" border="0">
@@ -35,7 +43,7 @@
 		<tr align="left">
 			<td class="bold" align="left">版权：</td>
 			<td align="left"><%=titles.getCopyright()%></td>
-		</tr> 
+		</tr>
 		<tr align="left">
 			<td><form method="post" action="../servlet/AddTitlesToCart">
 					<input type="submit" value="放入购物车" />

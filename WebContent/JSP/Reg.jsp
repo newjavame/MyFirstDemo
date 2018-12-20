@@ -78,7 +78,7 @@
 	<form method="post" action="<%=path%>/servlet/doReg" name="register">
 		<table align="center" valign="center">		
 				<tr>
-					<td align="center">用户注册</td>
+					<td colspan="2" align="center">用户注册</td>
 				</tr>
 				<tr>
 					<td>用户名：</td>

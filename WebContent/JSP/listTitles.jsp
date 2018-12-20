@@ -5,9 +5,21 @@
 <head>
 <meta charset="utf-8">
 <title>查看图书信息</title>
+<style type="text/css">
+body{
+    background-image: url(../images/addT.jpg);
+    background-size: 100%;
+    height: auto;
+}
+</style>
+
 </head>
 <body >
-	<table>
+
+	<table align="center" valign="center">
+	   <tr>
+	   <td colspan="5" align="center">图书信息   </td>
+	   </tr>
 		<tr>
 			<td>ISBN</td>
 			<td>书名</td>

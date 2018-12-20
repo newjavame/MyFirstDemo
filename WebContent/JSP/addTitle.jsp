@@ -5,10 +5,20 @@
 <head>
 <meta charset="utf-8">
 <title>添加图书</title>
+<style type="text/css">
+body{
+    background-image: url(../images/addT.jpg);
+    background-size: 100%;
+    height: auto;
+}
+</style>
 </head>
 <body>
 <form action="../servlet/DoAddTitle">
 	<table align="center" valign="center">	
+	<tr>
+	<td colspan="2" align="center">添加图书信息</td>
+	</tr>
 		<tr>
 			<td>ISBN</td>
 			<td><input type="text" name="isbn" /></td>

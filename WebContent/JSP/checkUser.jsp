@@ -24,7 +24,7 @@
 			if (name.equals(rs.getString("loginname")) && password.equals(rs.getString("password"))) {
 				application.setAttribute("name", name);
 				response.sendRedirect("main.jsp");
-			}			
+			}
 		}
 		out.println("无此用户或密码错误，登录失败！<br><br>");
 		out.println("<a href='../HTML/index.html'>重新登录");
