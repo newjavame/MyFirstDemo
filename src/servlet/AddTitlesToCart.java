@@ -17,16 +17,16 @@ import java.util.*;
 
 public class AddTitlesToCart extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-   
+
     public AddTitlesToCart() {
-        super();       
+        super();
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		HttpSession session = request.getSession();	
+		HttpSession session = request.getSession();
 		// 如果session不存在就跳转到浏览图书页面;
-		if (session == null) {			
+		if (session == null) {
 			request.getRequestDispatcher("../JSP/viewBook.jsp").forward(request, response);
 		}
 		// 从session中提取出购物车（cart）和要添加的图书对象titles
@@ -45,7 +45,7 @@ public class AddTitlesToCart extends HttpServlet {
 		} else {// 否则就创建一个新的条目到cart中
 			CartItem cartItem1 = new CartItem();
 			cartItem1.setTitle(titles);
-			cartItem.setQuantity(1);
+			cartItem1.setQuantity(1);
 			cart.put(titles.getIsbn(), cartItem1);
 		}
 		// 成功添加到购物车后转向viewCart.jsp显示购物车
