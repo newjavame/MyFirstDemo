@@ -33,6 +33,7 @@ public class doReg extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		String username = request.getParameter("username");
 		String password = request.getParameter("userpass");
+		request.setAttribute("username", username);
 		
 		try {
 			Connection conn = DBcon.getConnection();

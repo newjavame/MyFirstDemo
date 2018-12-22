@@ -6,15 +6,9 @@
 <head>
 <meta charset="utf-8">
 <title>图书信息</title>
-  <style type="text/css">
-body {
-    background-image: url(../images/detail.jpg);
-    background-size: 100%;
-    height: auto;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="../css/logreg.css" />
 </head>
-<body>
+<body class="body1">
 
 	<%
 		//从session中获取titles值，

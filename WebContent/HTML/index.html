@@ -20,36 +20,40 @@
 <link rel="stylesheet" type="text/css" href="../css/logreg.css" />
 </head>
 <body class="body1">
+	<div
+		style="text-align: center; font-family: YouYuan; font-size: 42px; margin-top: 75px;">
+		<big>欢迎使用网上书店</big>
+	</div>
 	<form method="post" name="Register" action="../JSP/checkUser.jsp"
 		target="_self">
 		<table align="center" valign="center">
+
 			<tr>
-				<td colspan="2" align="center"><font size=5
-					style="font-family: simhei">Sign In:</font></td>
+				<td><font style="font-family: FangSong; font-size: 30px;">用户名：</font></td>
+				<td><input type="text" name="loginName"
+					style="width: 250px; height: 35px;"></td>
 			</tr>
 			<tr>
-				<td>USERNAME：</td>
-				<td><input type="text" name="loginName" size="20" class="text1"></td>
+				<td><font style="font-family: FangSong; font-size: 30px;">密码：</font></td>
+				<td><input type="password" name="password"
+					style="width: 250px; height: 35px;"></td>
 			</tr>
 			<tr>
-				<td>PASSWORD：</td>
-				<td><input type="password" name="password" size="20"
-					class="text1"></td>
+				<td><font style="font-family: FangSong; font-size: 30px;">验证码：</font></td>
+				<td><input type="text" name="username"
+					style="width: 250px; height: 35px;"></td>
 			</tr>
 			<tr>
-				<td>CHECKCODE：</td>
-				<td><input type="text" name="checkCode" size="20" class="text1"></td>
+				<td align="center" colspan="2"><input type="button" value="登录"
+					name="B1"
+					style="font-family: FangSong; font-size: 25px; width: 125px; height: 40px;"
+					onclick="RegisterSubmit()"></td>
 			</tr>
 			<tr>
-				<td><input type="button" value="sign in" name="B1"
-					onclick="RegisterSubmit()" class="button1"></td>
-				<td><input type="reset" value="fresh" name="B2" class="button1"></td>
-			</tr>
-			<tr>
-				<td colspan="2"><a href="../JSP/Reg.jsp">Don't hava an
-						account? Sign Up</a></td>
+				<td colspan="2" align="center"><a href="../JSP/Reg.jsp">注册</a></td>
 			</tr>
 		</table>
 	</form>
+
 </body>
 </html>

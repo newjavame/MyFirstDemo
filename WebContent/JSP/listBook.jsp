@@ -10,7 +10,7 @@
 <title>书架维护</title>
 <link rel="stylesheet" type="text/css" href="../css/logreg.css" />
 </head>
-<body class="listbookbody">
+<body class="body1">
 <h1>书架维护</h1>
 	<table >
 		<tr>
@@ -19,7 +19,7 @@
 			<td>版本</td>
 			<td>版权</td>
 			<td>价格</td>
-		</tr>	
+		</tr>
 		<%
 			Connection conn = db.getConnection();
 			Statement st = conn.createStatement();
@@ -35,7 +35,7 @@
 			%>
 			<td><%=rs.getString(2)%></td>
 			<td><%=rs.getInt("editionNumber")%></td>
-			 <td><%=rs.getString("copyright")%></td> 
+			 <td><%=rs.getString("copyright")%></td>
 			<td><%=rs.getDouble("price")%></td>
 			<td><a
 				href="../servlet/DoDeleteTitle?isbn=<%=rs.getString("isbn")%>">删除</a></td>

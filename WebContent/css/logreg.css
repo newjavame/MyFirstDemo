@@ -1,13 +1,13 @@
 @charset "UTF-8";
 
 .body1 {
-	background-image: url(../images/bglog.jpg);
+	background-image: url(../images/bg.jpg);
 	background-size: 100%;
 	height: auto;
 }
 
 .body2 {
-	background-image: url(../images/reglog.png);
+	background-image: url(../images/bg.jpg);
 	background-size: 100%;
 	height: auto;
 }

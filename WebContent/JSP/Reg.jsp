@@ -75,35 +75,40 @@
 	}
 </script>
 <body class="body2">
+	<div
+		style="text-align: center; font-family: YouYuan; font-size: 42px; margin-top: 75px;">
+		<big>欢迎新用户注册！</big>
+	</div>
 	<form method="post" action="<%=path%>/servlet/doReg" name="register">
-		<table align="center" valign="center">		
-				<tr>
-					<td colspan="2" align="center">用户注册</td>
-				</tr>
-				<tr>
-					<td>用户名：</td>
-					<td><input type="text" name="username" id="username"
-						onChange="onChang1(this)" class="text1">
-					<td id="usName"></td>
-				</tr>
-				<tr>
-					<td>密码：</td>
-					<td><input type="password" name="userpass" id="userpass"
-						value="" onChange="onChang2(this)" class="text1">
-					<td id="usPass"></td>
-				</tr>
-				<tr>
-					<td>确认密码：</td>
-					<td><input type="password" name="userpass1" id="userpass1"
-						value="" onChange="onChang3(this)" class="text1">
-					<td id="usPass1"></td>
-				</tr>
-				<tr>
-					<td><input type="submit" value="提交" onClick="sub()"
-						class="button1">
-					<td><input type="button" value="重置" onClick="res()"
-						class="button1">
-				</tr>			
+		<table align="center" valign="center">
+			<tr>
+				<td align="right"><font
+					style="font-family: FangSong; font-size: 30px;">用户名：</font></td>
+				<td><input type="text" name="username" id="username"
+					onChange="onChang1(this)" style="width: 300px; height: 30px;">
+				<td id="usName"></td>
+			</tr>
+			<tr>
+				<td align="right"><font
+					style="font-family: FangSong; font-size: 30px;">密码：</font></td>
+				<td><input type="password" name="userpass" id="userpass"
+					value="" onChange="onChang2(this)"
+					style="width: 300px; height: 30px;">
+				<td id="usPass"></td>
+			</tr>
+			<tr>
+				<td align="right"><font
+					style="font-family: FangSong; font-size: 30px;">确认密码：</font></td>
+				<td><input type="password" name="userpass1" id="userpass1"
+					value="" onChange="onChang3(this)"
+					style="width: 300px; height: 30px;">
+				<td id="usPass1"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="submit" value="注册"
+					onClick="sub()"
+					style="font-family: FangSong; font-size: 25px; width: 200px; height: 40px;"></input>
+			</tr>
 		</table>
 	</form>
 </body>

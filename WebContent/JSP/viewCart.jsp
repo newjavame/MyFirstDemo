@@ -6,8 +6,9 @@
 <head>
 <meta charset="utf-8">
 <title>显示购物车信息</title>
+<link rel="stylesheet" type="text/css" href="../css/logreg.css" />
 </head>
-<body>
+<body class="body1">
 	<%
 		Map cart = (Map) session.getAttribute("cart");
 		double total = 0;

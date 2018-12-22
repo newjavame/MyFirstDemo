@@ -9,7 +9,7 @@
 <title>浏览图书页面</title>
 <link rel="stylesheet" type="text/css" href="../css/logreg.css" />
 </head>
-<body class="viewbookbgbody">
+<body class="body1">
 	<h1 align="center">浏览图书</h1>
 	<table align="center">
 		<tr>
@@ -26,7 +26,7 @@
 			Title titles = null;
 			for (int i = 0; i < list.size(); i++) {
 				titles = (Title) list.get(i);
-			
+
 		%>
 		<tr >
 			<td><a href="../servlet/ToViewTitle?isbn=<%=titles.getIsbn()%>"
