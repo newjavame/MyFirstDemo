@@ -22,53 +22,45 @@
 		}
 	</script>
 	<form action="../servlet/DoOrder" method="post" name="order">
-		<table >
+		<table align="center" valign="center" >
 			<tr>
-				<td colspan="2"><font size=4>订单处理请输入以下信息:</font></td>
+				<td colspan="2" style="font-family: YouYuan; font-size: 42px;" align="center">订单处理请输入以下信息</td>
 			</tr>
 			<tr>
 				<td colspan="2">&nbsp;</td>
 			</tr>
 			<tr>
-				<td>用户名:</td>
-				<td><div align="left">
-						<input type="text" name="username" size="25" />
-					</div></td>
+				<td style="font-family: YouYuan; font-size: 42px;">用户名:</td>
+				<td>
+						<input type="text" name="username" size="25" style="width: 330px; height: 30px;" />
+					</td>
 			</tr>
+
 			<tr>
-				<td colspan="2">&nbsp;</td>
+				<td style="font-family: YouYuan; font-size: 42px;">邮编:</td>
+				<td>
+						<input type="text" name="zipcode" size="25" style="width: 330px; height: 30px;" />
+					</td>
 			</tr>
+
 			<tr>
-				<td>邮编:</td>
-				<td><div align="left">
-						<input type="text" name="zipcode" size="25" />
-					</div></td>
+				<td style="font-family: YouYuan; font-size: 42px;">电话:</td>
+				<td>
+						<input type="text" name="phone" size="25" style="width: 330px; height: 30px;" />
+					</td>
 			</tr>
+
 			<tr>
-				<td colspan="2">&nbsp;</td>
+				<td style="font-family: YouYuan; font-size: 42px;">信用卡:</td>
+				<td>
+						<input type="text" name="creditcard" size="25"  style="width: 330px; height: 30px;"/>
+					</td>
 			</tr>
-			<tr>
-				<td>电话:</td>
-				<td><div align="left">
-						<input type="text" name="phone" size="25" />
-					</div></td>
-			</tr>
-			<tr>
-				<td colspan="2">&nbsp;</td>
-			</tr>
-			<tr>
-				<td>信用卡:</td>
-				<td><div align="left">
-						<input type="text" name="creditcard" size="25" />
-					</div></td>
-			</tr>
-			<tr>
-				<td colspan="2">&nbsp;</td>
-			</tr>
+
 			<tr>
 				<td><input type="submit" value="提交" name="B1"
-					onclick="RegisterSubmit()"></td>
-				<td><input type="reset" value="重置" name="B2"></td>
+					onclick="RegisterSubmit()" style="width: 150px; height: 32px; font-family: FangSong; font-size: 20px;"></td>
+				<td align="right"><input type="reset" value="重置" name="B2" style="width: 150px; height: 32px; font-family: FangSong; font-size: 20px;"></td>
 			</tr>
 		</table>
 	</form>
