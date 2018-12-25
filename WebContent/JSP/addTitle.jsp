@@ -13,6 +13,7 @@ body {
 	height: auto;
 }
 </style>
+-->
 <link rel="stylesheet" type="text/css" href="../css/logreg.css" />
 </head>
 <body class="body1">
