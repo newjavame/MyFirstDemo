@@ -20,9 +20,9 @@
 			<td colspan="3"><h2><%=titles.getTitle()%></h2></td>
 		</tr>
 		<tr>
-			<td rowspan="5"><img style="border: thin solid black" width="80"
+			 <td rowspan="5"><img style="border: thin solid black" width="80"
 				height="120" alt="<%=titles.getTitle()%>:<%=titles.getIsbn()%>.jpg"
-				src="images/<%=titles.getIsbn()%>.jpg"></td>
+				src="images/<%=titles.getIsbn()%>.jpg"></td> 
 			<td class="bold" align="left">图书编号:</td>
 			<td align="left"><%=titles.getIsbn()%></td>
 		</tr>

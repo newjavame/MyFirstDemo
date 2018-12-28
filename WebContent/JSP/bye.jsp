@@ -70,8 +70,6 @@
 	电话：<%=bookOrder.getPhone() %>
 	信用卡号：<%=bookOrder.getCreditcard() %>
 	购书总额：<%=bookOrder.getTotal() %>
-	<br>
-	本书店将及时发货请注意查收，欢迎下次光临!<br>
 <!-- 	将会话注销 -->
 	<%session.invalidate(); %>
 </body>

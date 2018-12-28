@@ -26,6 +26,7 @@ public class DoSaveEditTitle extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
+		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
 		//获取表单传来的图书编辑信息
 		String isbn=request.getParameter("isbn");//ISBN

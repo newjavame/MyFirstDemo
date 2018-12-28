@@ -10,6 +10,8 @@
 	<%
 		//从request对象中取出属性title的值
 		Title title = (Title) request.getAttribute("title");
+	request.setCharacterEncoding("utf-8");
+    response.setCharacterEncoding("utf-8");
 	%>
 	<h1>修改图书</h1>
 	<form action="../servlet/DoSaveEditTitle" method="post">
@@ -55,9 +57,9 @@
 		</table>
 	</form>
 	<br>
-	<a href="uploadfile.jsp?isbn=<%=title.getIsbn()%>">上传图书封面图像文件</a>
+	<%-- <a href="uploadfile.jsp?isbn=<%=title.getIsbn()%>">上传图书封面图像文件</a>
 
-	<a href="uploadfile_show.jsp">查看图书封面图像文件</a>
+	<a href="uploadfile_show.jsp">查看图书封面图像文件</a> --%>
 </body>
 
 </html>

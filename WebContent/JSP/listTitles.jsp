@@ -8,10 +8,12 @@
 <link rel="stylesheet" type="text/css" href="../css/logreg.css" />
 </head>
 <body class="body1" >
-
+<%
+  int i=0;
+%>
 	<table align="center" valign="center">
 	   <tr>
-	   <td colspan="5" align="center">图书信息   </td>
+	   <td colspan="5" align="center">书库图书信息 </td>
 	   </tr>
 		<tr>
 			<td>ISBN</td>
@@ -35,12 +37,16 @@
 			<td><%=rs.getDouble("price")%></td>
 		</tr>
 		<%
+		++i;
 			}
 			rs.close();
 			st.close();
 			conn.close();
 		%>
-
+        <tr>
+            <td colspan="4" align="right">总计</td>
+            <td><font color="red"><%=i %></font>条图书信息 </td>
+        </tr>
 	</table>
 
 </body>

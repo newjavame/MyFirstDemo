@@ -7,12 +7,16 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>书架维护</title>
+<title>修改图书</title>
 <link rel="stylesheet" type="text/css" href="../css/logreg.css" />
 </head>
 <body class="body1">
-<h1>书架维护</h1>
-	<table >
+<h1 align="center">请谨慎修改图书！</h1>
+<%
+request.setCharacterEncoding("utf-8");
+ response.setCharacterEncoding("utf-8");
+%>
+	<table align="center" valign="center" >
 		<tr>
 			<td>ISBN</td>
 			<td>书名</td>
@@ -48,6 +52,6 @@
 		%>
 	</table>
 	<br>
-	<a href="addTitle.jsp">添加图书</a>
+	<center><a href="addTitle.jsp" >添加图书</a></center>
 </body>
 </html>

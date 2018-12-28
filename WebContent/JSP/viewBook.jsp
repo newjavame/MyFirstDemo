@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="../css/logreg.css" />
 </head>
 <body class="body1">
-	<h1 align="center">浏览图书</h1>
+	<h1 align="center">图书任你选购</h1>
 	<table align="center">
 		<tr>
 			<td>ISBN</td>
