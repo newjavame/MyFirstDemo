@@ -11,9 +11,8 @@
 当前用户：
     <%=application.getAttribute("name")%>
 	<div style="text-align:center;font-family:YouYuan;font-size:42px;margin-top:50px;">
-
         <big>欢迎使用网上书店</big>
-    </div>
+         </div>
 	<div
 		style="position: absolute; top: 250px; left: 650px; font-family: FangSong; font-size: 30px;">
 		<a href=viewBook.jsp target="_blank">1.购买书籍</a> <br>

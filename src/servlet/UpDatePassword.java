@@ -26,6 +26,8 @@ public class UpDatePassword extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String username = request.getParameter("username");
+		/*PrintWriter out = response.getWriter();
+		out.print(username);*/
 		String oldpass = request.getParameter("oldpass");
 		String newpass = request.getParameter("newpass");
 		String confirmpass = request.getParameter("confirmpass");
@@ -39,7 +41,7 @@ public class UpDatePassword extends HttpServlet {
 			String sql = "update userinfo set password=?"+"where loginname="+username;
 			st = conn.prepareStatement(sql);
 			st.setString(2, yh.getPassword());
-			/*st.setString(2, yh.getPassword());*/
+			st.setString(2, yh.getPassword());
 			int resultSet = st.executeUpdate();
 			request.getRequestDispatcher("/JSP/ok1.jsp").forward(request, response);
 
