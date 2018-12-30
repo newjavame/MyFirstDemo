@@ -11,13 +11,11 @@
 	<%
 		String username = (String) request.getAttribute("username");
 	%>
-	<div
-		style="text-align: center; font-family: YouYuan; font-size: 42px; margin-top: 150px;">
-		您好
-		<%=username%><BR>
-		<BR> 恭喜您注册成功！<br><br>
-		  <a href="../HTML/index.html">现在去登录吧</a>
-	</div>
+		<%-- 您好
+		<%=username%><BR> --%>
+		    恭喜您注册成功<br><br>
+		<img src="../images/duihao.jpg" style="height:200px;width:250px;"/><br><br>
+		  <a href="../JSP/login.jsp">现在去登录吧</a>
 
 </body>
 </html>

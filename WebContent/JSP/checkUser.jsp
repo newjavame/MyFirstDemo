@@ -10,7 +10,7 @@
 <body>
 	<%
 		request.setCharacterEncoding("utf-8");
-		String name = request.getParameter("loginName");
+		String name = request.getParameter("loginname");
 		String password = request.getParameter("password");
 	%>
 
@@ -26,8 +26,10 @@
 				response.sendRedirect("main.jsp");
 			}
 		}
+
+		out.print("<img src='../images/cuohao.png'/>");
 		out.println("无此用户或密码错误，登录失败！<br><br>");
-		out.println("<a href='../HTML/index.html'>重新登录");
+		out.println("<a href='../JSP/login.jsp'>重新登录");
 		//</a>或<a href='../JSP/Reg.jsp'>注册</a>
 	%>
 </body>

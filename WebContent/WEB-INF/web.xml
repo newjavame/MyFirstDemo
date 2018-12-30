@@ -8,6 +8,18 @@
     <servlet-name>doReg</servlet-name>
     <url-pattern>/servlet/doReg</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UpDatePassword</servlet-name>
+    <servlet-class>servlet.UpDatePassword</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpDatePassword</servlet-name>
+    <url-pattern>/servlet/UpDatePassword</url-pattern>
+  </servlet-mapping>
+
+
+
   <servlet>
     <servlet-name>ImageServlet</servlet-name>
     <servlet-class>servlet.ImageServlet</servlet-class>
@@ -64,7 +76,6 @@
     <servlet-name>ToViewTitle</servlet-name>
     <url-pattern>/servlet/ToViewTitle</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>DoSaveEditTitle</servlet-name>
     <servlet-class>servlet.DoSaveEditTitle</servlet-class>
@@ -73,7 +84,6 @@
     <servlet-name>DoSaveEditTitle</servlet-name>
     <url-pattern>/servlet/DoSaveEditTitle</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>AddTitlesToCart</servlet-name>
     <servlet-class>servlet.AddTitlesToCart</servlet-class>
@@ -82,8 +92,7 @@
     <servlet-name>AddTitlesToCart</servlet-name>
     <url-pattern>/servlet/AddTitlesToCart</url-pattern>
   </servlet-mapping>
-  
-   <servlet>
+  <servlet>
     <servlet-name>DoOrder</servlet-name>
     <servlet-class>servlet.DoOrder</servlet-class>
   </servlet>
@@ -91,7 +100,6 @@
     <servlet-name>DoOrder</servlet-name>
     <url-pattern>/servlet/DoOrder</url-pattern>
   </servlet-mapping>
-  
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>

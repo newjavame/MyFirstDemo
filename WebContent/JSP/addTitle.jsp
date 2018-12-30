@@ -33,11 +33,11 @@ body {
 				<td><input type="text" name="title"
 					style="width: 330px; height: 30px;" /></td>
 			</tr>
-			<tr>
+			<!-- <tr>
 				<td style="font-family: FangSong; font-size: 30px;">封面图像文件名称</td>
 				<td><input type="text" name="imagefile"
 					style="width: 330px; height: 30px;" /></td>
-			</tr>
+			</tr> -->
 			<tr>
 				<td style="font-family: FangSong; font-size: 30px;">版本号</td>
 				<td><input type="text" name="editionNumber"
