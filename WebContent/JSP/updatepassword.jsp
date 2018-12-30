@@ -13,17 +13,6 @@
 <script src="<c:url value='/js/common.js'/>"></script>
 <title>修改密码</title>
 </head>
-<!-- <script type="text/javascript">
-   function checkpass(){
-	   var newpass=document.getElementById("newpass").value;
-	   var confirmpass=document.getElementById("confirmpass").value;
-	   if(newpass==null||confirmpass==null){
-		   document.getElementById("mima").innerHTML="密码不能为空";
-	   }
-   }
-
-
-</script> -->
 <body>
 	<div class="div1">
 		<div class="div0">修改密码</div>

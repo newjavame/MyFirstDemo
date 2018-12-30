@@ -19,7 +19,7 @@
 		<a href=viewBook.jsp target="_blank">1.购买书籍</a> <br>
 		<a href=listBook.jsp target="_blank">2.修改图书信息</a><br>
 		<a href=listTitles.jsp target="_blank">3.查看图书信息</a><br>
-		<a href=listTitles.jsp target="_blank">4.修改个人信息</a>
+		<a href=updatepassword.jsp target="_blank">4.修改登录信息</a>
 	</div>
 </body>
 </html>

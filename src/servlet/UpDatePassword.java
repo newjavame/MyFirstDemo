@@ -41,7 +41,7 @@ public class UpDatePassword extends HttpServlet {
 			st.setString(2, yh.getPassword());
 			/*st.setString(2, yh.getPassword());*/
 			int resultSet = st.executeUpdate();
-			request.getRequestDispatcher("/JSP/ok.jsp").forward(request, response);
+			request.getRequestDispatcher("/JSP/ok1.jsp").forward(request, response);
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
