@@ -5,17 +5,18 @@
 <head>
 <meta charset="utf-8">
 <title>修改图书页面</title>
-</head>
-<body>
+<link rel="stylesheet" type="text/css" href="../css/logreg.css" />
+</head >
+<body class="body1">
 	<%
 		//从request对象中取出属性title的值
 		Title title = (Title) request.getAttribute("title");
 	request.setCharacterEncoding("utf-8");
     response.setCharacterEncoding("utf-8");
 	%>
-	<h1>修改图书</h1>
+	<h1 align="center">修改图书</h1>
 	<form action="../servlet/DoSaveEditTitle" method="post">
-		<table>
+		<table align="center">
 			<tr>
 				<td>ISBN</td>
 				<td><input type="text" name="isbn" readonly="true"
@@ -52,7 +53,8 @@
 					value="<%=title.getCopyright()%>" /></td>
 			</tr>
 			<tr>
-				<td><input type="submit" value="保存" /></td>
+			 <br><br>
+				<td colspan="2" align="center"><input type="submit" value="保存" /></td>
 			</tr>
 		</table>
 	</form>
