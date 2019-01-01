@@ -6,12 +6,13 @@
 <head>
 <meta charset="utf-8">
 <title>订单详细信息</title>
+<link rel="stylesheet" type="text/css" href="../css/logreg.css" />
 </head>
-<body>
+<body class="body1">
 	<%
 		BookOrder bookOrder = (BookOrder) session.getAttribute("order");
 	%>
-	订书成功！本次订书详情如下：
+	<center><h1>订书成功！本次订书详情如下</h1></center>
 	<br>
 	<%
 		Map cart = (Map) session.getAttribute("cart");
@@ -27,7 +28,7 @@
 			int quantity;//购买数量
 			double price, subtotal;//价格和小计
 	%>
-	<table cellSpacing=0 cellPadding=0 width=490 border=1>
+	<table cellSpacing=0 cellPadding=0 width=490 border=1 align="center" valign="center">
 		<thead>
 			<tr>
 				<th>书籍名称</th>
@@ -57,19 +58,22 @@
 			}
 		%>
 		<tr>
-			<td colspan="4" class="bold right"><b>总计:</b><%=new DecimalFormat("0.00").format(total)%>
+			<td colspan="4" class="bold right" align="right"><b>总计:</b><%=new DecimalFormat("0.00").format(total)%>
 			</td>
 		</tr>
 	</table>
 	<%
 		}
 	%>
-	客户账户信息如下：<br>
-	客户名：<%=bookOrder.getUserName() %><br>
-	邮编：<%=bookOrder.getZipcode() %>
+	<br>
+	<br>
+	<center>客户账户信息如下：</center><br>
+	<center>客户名：<%=bookOrder.getUserName() %></center><br>
+	<center>邮编：<%=bookOrder.getZipcode() %>
 	电话：<%=bookOrder.getPhone() %>
 	信用卡号：<%=bookOrder.getCreditcard() %>
 	购书总额：<%=bookOrder.getTotal() %>
+	</center>
 <!-- 	将会话注销 -->
 	<%session.invalidate(); %>
 </body>

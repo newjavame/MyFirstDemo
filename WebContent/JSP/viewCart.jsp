@@ -9,6 +9,7 @@
 <link rel="stylesheet" type="text/css" href="../css/logreg.css" />
 </head>
 <body class="body1">
+<h1 align="center">订单详情</h1>
 	<%
 		Map cart = (Map) session.getAttribute("cart");
 		double total = 0;
@@ -23,7 +24,7 @@
 			int quantity;//购买数量
 			double price, subtotal;//价格和小计
 	%>
-	<table cellSpacing=0 cellPadding=0 width=490 border=1>
+	<table cellSpacing=0 cellPadding=0 width=490 border=1 align="center" valign="center">
 		<thead>
 			<tr>
 				<th>书籍名称</th>
@@ -53,7 +54,7 @@
 			}
 		%>
 		<tr>
-			<td colspan="4" class="bold right"><b>总计:</b><%=new DecimalFormat("0.00").format(total)%>
+			<td colspan="4" class="bold right" align="right"><b>总计:</b><%=new DecimalFormat("0.00").format(total)%>
 			</td>
 		</tr>
 	</table>
@@ -61,9 +62,13 @@
 		session.setAttribute("total", new Double(total));
 		}
 	%>
-	<a href="../JSP/viewBook.jsp">继续购物</a>
+	<br>
+	<br>
+	<center> <a href="../JSP/viewBook.jsp"  >继续购物</a></center>
+	<br>
+	<br>
 	<form action="../HTML/order.html" method="get">
-		<input type="submit" value="结账">
+		<center><input type="submit" value="结账" style="width: 200px; height: 35px;"></center>
 	</form>
 </body>
 </html>
