@@ -66,10 +66,13 @@ public class DBcon {
 	}
 //测试数据库连接
 
-	/*
-	 * public static void main(String[] args) { Connection con =
-	 * DBcon.getConnection(); if (con != null) { System.out.println("数据库连接正常！"); }
-	 * else { System.out.println("数据库连接错误！"); } }
-	 */
+	public static void main(String[] args) {
+		Connection con = DBcon.getConnection();
+		if (con != null) {
+			System.out.println("数据库连接正常！");
+		} else {
+			System.out.println("数据库连接错误！");
+		}
+	}
 
 }
